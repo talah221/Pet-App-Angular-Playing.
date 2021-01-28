@@ -1,0 +1,9 @@
+<section *ngIf="pets" class="pet-list-container">
+    <smooth-dnd-container (drop)="onDrop($event)">
+        <smooth-dnd-draggable *ngFor="let pet of pets">
+            <app-pet-preview [pet]="pet"  (onGiveKiss)="onGiveKiss($event)" (swiperight)="swipeHandler('right', pet)" (swipeleft)="swipeHandler('left',pet)">
+            </app-pet-preview>
+        </smooth-dnd-draggable>
+    </smooth-dnd-container>
+
+</section>

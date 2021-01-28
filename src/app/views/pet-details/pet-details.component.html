@@ -1,0 +1,16 @@
+<section *ngIf="pet" class="pet-details-container">
+
+    <div class="pet-info">
+        <h1>Name: {{pet.name}}</h1>
+        <h3>Likes: {{pet.likes}}</h3>
+        <h3>Unlikes: {{pet.unlikes}}</h3>
+        <h3>Lifes: {{pet.life}}</h3>
+        <button class="gift-btn btn" (click)="onGift()">Gift Me!</button>
+        <button class="back-btn btn" (click)="goBack()">Go Back</button>
+
+    </div>
+
+    <div class="pet-img">
+        <img [src]="getImg" [alt]="pet.name + ' Image'">
+    </div>
+</section>

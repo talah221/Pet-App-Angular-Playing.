@@ -1,0 +1,14 @@
+.main-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    > * {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

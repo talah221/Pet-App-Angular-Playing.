@@ -1,0 +1,7 @@
+<main class="main-container">
+    
+    <h1>Meet My Lovely Pets!</h1>
+    <app-pet-filter (onFilter)="onFilterHandler($event)"></app-pet-filter>
+    <app-pet-list (giveKiss)="giveKiss($event)" [pets]="petService.pets$ | async"></app-pet-list>
+
+</main>

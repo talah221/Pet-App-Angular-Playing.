@@ -1,0 +1,15 @@
+<div class="pet-preview-container">
+    <div class="info-container">
+        <h3 class="pet-name">Called {{pet.name}}</h3>
+        <h3 >Life: {{pet.life}}</h3>
+        <h3 >Likes: {{pet.likes}}</h3>
+        <h3 >Unlikes: {{pet.unlikes}}</h3>
+        <button class="give-kiss-btn btn" *ngIf="pet.life" (click)="onGiveKiss.emit(pet)">Kiss</button>
+        <h3 *ngIf="!pet.life" class="pet-dead">Pet Is Dead</h3>
+        <button *ngIf="!pet.life" class="give-life-btn btn" (click)="onGiveKiss.emit(pet)">Return to life</button>
+        <button class="give-kiss-btn btn" (click)="giveGift()">Gift</button>
+    </div>
+    <div class="img-container">
+        <img [src]="getImg" [alt]="pet.name + 'Image' " title="{{pet.name}}">
+    </div>
+</div>
